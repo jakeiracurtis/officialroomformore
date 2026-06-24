@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Donate to Room For More and create more room for young people of color in Greater Richmond, VA.">
+  <title>Donate — Room For More</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .donate-layout { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+    .donate-left h2 { margin-bottom:20px; }
+    .donate-left > p { font-size:16px; line-height:1.8; margin-bottom:20px; }
+    @media(max-width:900px){ .donate-layout{grid-template-columns:1fr;gap:48px;} }
+  </style>
+</head>
+<body data-page="donate">
+  <div id="nav-placeholder"></div>
+
+  <header class="page-hero" style="background:var(--bg-light);">
+    <div class="container">
+      <span class="eyebrow">Donate</span>
+      <h1>Create<br><span style="color:var(--orange);">More</span><br>Room.</h1>
+      <p>Your support gives young people in Greater Richmond access to the workshops, experiences, and opportunities that expand what they believe is possible for their future.</p>
+    </div>
+  </header>
+
+  <div id="ticker-placeholder"></div>
+
+  <section class="section" style="background:var(--bg-white);">
+    <div class="container">
+      <div class="donate-layout">
+        <div class="donate-left">
+          <span class="eyebrow">Why It Matters</span>
+          <h2>Every dollar creates more access.</h2>
+          <p>Room For More runs on community support. Every contribution — no matter the size — directly funds the programs, experiences, and resources that help young people of color in Richmond see, believe, and become more.</p>
+          <p>We create exposure experiences, workshops, career panels, and mentorship opportunities that expand what young people believe is possible for their futures.</p>
+          <div class="impact-list">
+            <div class="impact-item">
+              <div class="impact-item__amount">$25</div>
+              <p>Covers workshop materials for a youth development session.</p>
+            </div>
+            <div class="impact-item">
+              <div class="impact-item__amount">$50</div>
+              <p>Funds one student's participation in a career exploration experience.</p>
+            </div>
+            <div class="impact-item">
+              <div class="impact-item__amount">$100</div>
+              <p>Supports one month of programming resources and supplies.</p>
+            </div>
+            <div class="impact-item">
+              <div class="impact-item__amount">$250</div>
+              <p>Sponsors a student for a full Room For More program experience.</p>
+            </div>
+            <div class="impact-item">
+              <div class="impact-item__amount">$500+</div>
+              <p>Helps build and launch new programs that reach more students across Richmond.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="donate-form">
+            <p class="form-section-label" style="margin-top:0;">Frequency</p>
+            <div class="frequency-toggle">
+              <button class="freq-btn active">One-Time</button>
+              <button class="freq-btn">Monthly</button>
+            </div>
+            <p class="form-section-label">Select an Amount</p>
+            <div class="donate-tiers" style="grid-template-columns:1fr 1fr;margin-top:0;margin-bottom:0;">
+              <div class="tier-card" data-amount="25">
+                <div class="tier-card__amount">$25</div>
+                <div class="tier-card__label">Workshop materials</div>
+              </div>
+              <div class="tier-card active" data-amount="50">
+                <div class="tier-card__amount">$50</div>
+                <div class="tier-card__label">Career experience</div>
+              </div>
+              <div class="tier-card" data-amount="100">
+                <div class="tier-card__amount">$100</div>
+                <div class="tier-card__label">Monthly resources</div>
+              </div>
+              <div class="tier-card" data-amount="250">
+                <div class="tier-card__amount">$250</div>
+                <div class="tier-card__label">Full program sponsor</div>
+              </div>
+            </div>
+            <div class="custom-amount-wrap" style="margin-top:12px;">
+              <span class="currency-symbol">$</span>
+              <input class="custom-amount-input" id="donation-amount" type="number" placeholder="Other amount" min="1">
+            </div>
+
+            <p class="form-section-label">Your Information</p>
+            <div class="form-row">
+              <div class="form-field">
+                <label class="form-label" for="d-first">First Name</label>
+                <input class="form-input" type="text" id="d-first" placeholder="First name">
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="d-last">Last Name</label>
+                <input class="form-input" type="text" id="d-last" placeholder="Last name">
+              </div>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="d-email">Email</label>
+              <input class="form-input" type="email" id="d-email" placeholder="your@email.com">
+            </div>
+
+            <p class="form-section-label">Payment</p>
+            <div class="form-field">
+              <label class="form-label" for="d-card">Card Number</label>
+              <input class="form-input" type="text" id="d-card" placeholder="•••• •••• •••• ••••" maxlength="19">
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label class="form-label" for="d-exp">Expiration</label>
+                <input class="form-input" type="text" id="d-exp" placeholder="MM / YY" maxlength="7">
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="d-cvv">CVV</label>
+                <input class="form-input" type="text" id="d-cvv" placeholder="•••" maxlength="4">
+              </div>
+            </div>
+            <button type="button" class="btn btn--orange" style="width:100%;justify-content:center;padding:16px;margin-top:8px;" id="donate-submit">Donate Now &rarr;</button>
+            <p class="tax-note">🔒 Room For More is a registered 501(c)(3) nonprofit. Your donation is tax-deductible. A receipt will be sent to the email address you provide. Questions? <a href="mailto:info@roomformore.org">info@roomformore.org</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="quote-block">
+    <div class="container">
+      <blockquote>"Your donation helps create room for more access, exposure, and opportunity for young people of color in Greater Richmond."</blockquote>
+      <cite>— Room For More</cite>
+    </div>
+  </div>
+
+  <section class="section" style="background:var(--bg-light);border-top:1px solid var(--border);">
+    <div class="container">
+      <span class="eyebrow">Other Ways to Give</span>
+      <h2>More ways to support the mission.</h2>
+      <div class="involve-grid" style="margin-top:40px;">
+        <div class="involve-card">
+          <div class="involve-card__icon">🏢</div>
+          <h3>Corporate Giving</h3>
+          <p>Many employers match charitable donations. Check if your company has a matching gift program and double your impact.</p>
+        </div>
+        <div class="involve-card">
+          <div class="involve-card__icon">📦</div>
+          <h3>In-Kind Support</h3>
+          <p>Donate supplies, equipment, professional services, or event space to directly support our programs.</p>
+          <a href="get-involved.html#contact" class="btn btn--outline-teal" style="font-size:12px;padding:10px 18px;margin-top:8px;">Contact Us</a>
+        </div>
+        <div class="involve-card">
+          <div class="involve-card__icon">📣</div>
+          <h3>Spread the Word</h3>
+          <p>Share Room For More with your network. Every conversation creates more visibility — and more possibility for our youth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="email-signup">
+    <div class="container">
+      <h3>Stay connected to the movement.</h3>
+      <p>Get updates on programs, events, and opportunities from Room For More.</p>
+      <form class="email-form" novalidate>
+        <input type="email" placeholder="your@email.com" required aria-label="Email address">
+        <button type="submit" class="btn btn--white">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="shared.js"></script>
+</body>
+</html>
